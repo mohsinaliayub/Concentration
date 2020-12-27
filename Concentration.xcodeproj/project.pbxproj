@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		427978F82597EFE000F2C3CF /* Concentration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427978F72597EFE000F2C3CF /* Concentration.swift */; };
+		427978FB2597F0AC00F2C3CF /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427978FA2597F0AC00F2C3CF /* Card.swift */; };
 		42911AD725878EAE00EF46BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42911AD625878EAE00EF46BC /* AppDelegate.swift */; };
 		42911AD925878EAE00EF46BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42911AD825878EAE00EF46BC /* SceneDelegate.swift */; };
 		42911ADB25878EAE00EF46BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42911ADA25878EAE00EF46BC /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		427978F72597EFE000F2C3CF /* Concentration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concentration.swift; sourceTree = "<group>"; };
+		427978FA2597F0AC00F2C3CF /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		42911AD325878EAE00EF46BC /* Concentration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Concentration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42911AD625878EAE00EF46BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42911AD825878EAE00EF46BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				42911ADA25878EAE00EF46BC /* ViewController.swift */,
+				427978FA2597F0AC00F2C3CF /* Card.swift */,
+				427978F72597EFE000F2C3CF /* Concentration.swift */,
 				42911ADC25878EAE00EF46BC /* Main.storyboard */,
 				42E1EA942596A42D0068AA76 /* Supporting Files */,
 				42911AE425878EAF00EF46BC /* Info.plist */,
@@ -146,6 +152,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				42911ADB25878EAE00EF46BC /* ViewController.swift in Sources */,
+				427978F82597EFE000F2C3CF /* Concentration.swift in Sources */,
+				427978FB2597F0AC00F2C3CF /* Card.swift in Sources */,
 				42911AD725878EAE00EF46BC /* AppDelegate.swift in Sources */,
 				42911AD925878EAE00EF46BC /* SceneDelegate.swift in Sources */,
 			);
