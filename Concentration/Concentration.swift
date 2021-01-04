@@ -7,24 +7,14 @@
 
 import Foundation
 
-class Concentration {
+struct Concentration {
     private(set) var cards = [Card]()
     
     // this variable holds an index of only one card that the user has chosen
     // if user has not chosen anything or more than one cards, it is nil
     private var indexOfOneAndOnlyFaceUpCard: Int? {
         get {
-            var foundIndex: Int?
-            for index in cards.indices {
-                if cards[index].isFaceUp {
-                    if foundIndex == nil {
-                        foundIndex = index
-                    } else {
-                        return nil
-                    }
-                }
-            }
-            return foundIndex
+            return cards.indices.filter { cards[$0].isFaceUp }.oneAndOnly
         }
         set {
             for index in cards.indices {
@@ -53,7 +43,7 @@ class Concentration {
     //      1) if there is no card faced up, set the current card to face up
     //      2) if there is already a single card with same identifier faced up, match them
     //      3) if there are 2 cards already faced up, face them down and set current card to face up
-    func chooseCard(at index: Int) {
+    mutating func chooseCard(at index: Int) {
         assert(cards.indices.contains(index), "Concentration.chooseCard(at: \(index)): chosen index not in the cards")
         if !cards[index].isMatched {
             // one card is already faced up, and we are taking its index from indexOfOneAndOnlyFaceUpCard
@@ -62,7 +52,7 @@ class Concentration {
             //     - If both are same, then set their isMatched property to true
             // Putting both the cards upwards and setting nil to our index holder variable
             if let matchIndex = indexOfOneAndOnlyFaceUpCard, matchIndex != index {
-                if cards[matchIndex].identifier == cards[index].identifier {
+                if cards[matchIndex] == cards[index] {
                     cards[matchIndex].isMatched = true
                     cards[index].isMatched = true
                 }
@@ -74,5 +64,11 @@ class Concentration {
                 indexOfOneAndOnlyFaceUpCard = index
             }
         }
+    }
+}
+
+extension Collection {
+    var oneAndOnly: Element? {
+        return count == 1 ? first : nil
     }
 }
